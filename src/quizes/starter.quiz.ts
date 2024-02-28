@@ -1,6 +1,6 @@
 import { Category, Quiz } from "../types/globals.types";
 
-export const STARTER: Quiz = {
+export const Starter: Quiz = {
   id: "unique-2",
   title: "Starter",
   description: "This is the description",

@@ -1,5 +1,10 @@
 import { FunctionComponent } from "react";
+import { Link } from "react-router-dom";
 
 export const Quiz: FunctionComponent = () => {
-  return <>Quiz</>;
+  return (
+    <>
+      <Link to={`/`}>Home</Link>
+    </>
+  );
 };
