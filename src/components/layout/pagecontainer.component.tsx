@@ -8,6 +8,8 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { FunctionComponent, PropsWithChildren } from "react";
+import { Colors } from "../../theme/colors.theme";
+import { Spacing } from "../../theme/spacing.theme";
 
 interface PageContainerProps extends PropsWithChildren {
   title: string;
@@ -23,10 +25,10 @@ export const PageContainer: FunctionComponent<PageContainerProps> = ({
     <>
       <SkipNavLink>Skip to content</SkipNavLink>
       <VStack
-        padding={4}
+        padding={Spacing.md}
         as="main"
         justifyContent={"center"}
-        gap={3}
+        gap={Spacing.sm}
         width="100vw"
         height="100vh"
         maxW="1600px"
@@ -36,10 +38,10 @@ export const PageContainer: FunctionComponent<PageContainerProps> = ({
           as="header"
           justifyContent="space-between"
           width="100%"
-          borderBottomColor={"gray.300"}
+          borderBottomColor={Colors.grayLight}
           borderBottomWidth={"2px"}
           borderBlockStartStyle="solid"
-          pb={4}
+          pb={Spacing.md}
         >
           <Text fontSize="2xl" fontWeight="bold">
             QUICK QUIZ
@@ -47,7 +49,7 @@ export const PageContainer: FunctionComponent<PageContainerProps> = ({
           {nav}
         </HStack>
         <SkipNavContent />
-        <Heading as="h1" mb={6}>
+        <Heading as="h1" mb={Spacing.lr}>
           {title}
         </Heading>
         <Box as="section" flexGrow={1} maxW="900px">
