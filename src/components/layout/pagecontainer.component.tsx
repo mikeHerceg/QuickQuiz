@@ -32,7 +32,15 @@ export const PageContainer: FunctionComponent<PageContainerProps> = ({
         maxW="1600px"
         margin="auto"
       >
-        <HStack as="header" justifyContent="space-between" width="100%">
+        <HStack
+          as="header"
+          justifyContent="space-between"
+          width="100%"
+          borderBottomColor={"gray.300"}
+          borderBottomWidth={"2px"}
+          borderBlockStartStyle="solid"
+          pb={4}
+        >
           <Text fontSize="2xl" fontWeight="bold">
             QUICK QUIZ
           </Text>
