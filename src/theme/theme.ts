@@ -8,6 +8,7 @@ export const theme = extendTheme({
       body: {
         color: Colors.text,
         fontWeight: fontWeight.normal,
+        fontSize: "16px",
       },
       // styles for the `a`
       a: {
