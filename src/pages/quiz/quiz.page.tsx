@@ -1,4 +1,4 @@
-import { FunctionComponent, useState } from "react";
+import { FunctionComponent } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router";
 import { PageContainer } from "../../components";
@@ -10,7 +10,6 @@ import { QuizNotFound } from "../../components/errors/quizNotFound.component";
 export const Quiz: FunctionComponent = () => {
   const { quizId } = useParams();
   const quizConfig = AllQuizes.find(({ id }) => id === quizId);
-  console.log(quizConfig);
 
   if (!quizConfig) return <QuizNotFound />;
 
