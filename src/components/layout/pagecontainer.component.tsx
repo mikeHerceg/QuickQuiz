@@ -43,7 +43,7 @@ export const PageContainer: FunctionComponent<PageContainerProps> = ({
           borderBlockStartStyle="solid"
           pb={Spacing.md}
         >
-          <Text fontSize="2xl" FontWeight="bold">
+          <Text fontSize="2xl" fontWeight="bold">
             QUICK QUIZ
           </Text>
           {nav}
