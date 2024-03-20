@@ -1,6 +1,5 @@
-import { Card, Grid, HStack } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
 import { FunctionComponent } from "react";
-import { Link } from "react-router-dom";
 import { PageContainer } from "../../components";
 import { QuizSummary } from "../../components/cards";
 import { AllQuizes } from "../../quizes/all.quiz";

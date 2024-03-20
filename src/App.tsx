@@ -8,7 +8,7 @@ function App() {
     <ChakraProvider theme={theme}>
       <BrowserRouter basename="/">
         <Routes>
-          <Route path="/quiz/:quizId" element={<Quiz />} />
+          <Route path="/quiz/:quizId/" element={<Quiz />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </BrowserRouter>

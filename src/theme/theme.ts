@@ -1,19 +1,19 @@
 import { extendTheme } from "@chakra-ui/react";
 import { Colors } from "./colors.theme";
-import { fontWeight } from "./typography.theme";
+import { FontWeight } from "./typography.theme";
 
 export const theme = extendTheme({
   styles: {
     global: {
       body: {
         color: Colors.text,
-        fontWeight: fontWeight.normal,
+        FontWeight: FontWeight.normal,
         fontSize: "16px",
       },
       // styles for the `a`
       a: {
         color: Colors.primary,
-        fontWeight: fontWeight.semiBold,
+        FontWeight: FontWeight.semiBold,
         transistion: ".15s ease all",
         _hover: {
           color: Colors.primaryDark,
