@@ -1,4 +1,5 @@
-import { createContext, FunctionComponent, useState } from "react";
+/* eslint-disable react-refresh/only-export-components */
+import { createContext, FunctionComponent, useContext, useState } from "react";
 import { Category } from "../../types/globals.types";
 
 type Filters = { search: null | string; category: null | Category };
@@ -23,4 +24,12 @@ export const FilterContextProvider: FunctionComponent<{
   return (
     <filterContext.Provider value={context}>{children}</filterContext.Provider>
   );
+};
+
+export const useFilterContext = () => {
+  const context = useContext(filterContext);
+  if (!context) {
+    throw Error("No Filter Context");
+  }
+  return context;
 };
