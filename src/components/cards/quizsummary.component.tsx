@@ -23,7 +23,7 @@ export const QuizSummary: FunctionComponent<QuizSummaryProps> = ({
       <Card padding={Spacing.lr}>
         <CardHeader p={0} mb={Spacing.sm}>
           <SectionHeader text={title} />
-          <SectionSubHeader text={Category[category]} />
+          <SectionSubHeader text={category} />
         </CardHeader>
         <CardBody p={0}>
           <BodyText text={description} />

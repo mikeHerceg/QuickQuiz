@@ -1,7 +1,4 @@
-export enum Category {
-  Math = 1,
-  History = 2,
-}
+export type Category = "Math" | "History";
 
 export type QuestionOption = {
   value: number;

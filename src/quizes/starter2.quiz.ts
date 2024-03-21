@@ -1,10 +1,11 @@
-import { Category, Quiz } from "../types/globals.types";
+import { Quiz } from "../types/globals.types";
+import { CATEGORIES } from "./categories.constant";
 
 export const Starter_two: Quiz = {
   id: "unique-1",
   title: "Starter Two",
   description: "This is the description",
-  category: Category.History,
+  category: CATEGORIES.history,
   questions: [
     {
       question: "Where is the liberty bell?",

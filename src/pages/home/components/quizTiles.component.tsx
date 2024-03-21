@@ -11,8 +11,9 @@ export const QuizTiles = () => {
   useEffect(() => {
     const { category, search } = filters;
     // filter by category
+    console.log(category);
     const byCategory = category
-      ? AllQuizes.filter(({ category }) => category === category)
+      ? AllQuizes.filter((quiz) => quiz.category === category)
       : AllQuizes;
     // then by search
     const bySearch = search
