@@ -10,11 +10,12 @@ export const QuizTiles = () => {
   const [quizzes, setQuizzes] = useState(AllQuizes);
   useEffect(() => {
     const { category, search } = filters;
+
     // filter by category
-    console.log(category);
     const byCategory = category
       ? AllQuizes.filter((quiz) => quiz.category === category)
       : AllQuizes;
+
     // then by search
     const bySearch = search
       ? byCategory.filter(({ title, description }) => {

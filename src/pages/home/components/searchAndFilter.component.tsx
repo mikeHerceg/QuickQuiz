@@ -10,7 +10,7 @@ import { ChangeEvent, useMemo } from "react";
 import { CATEGORIES } from "../../../quizes/categories.constant";
 import { Spacing } from "../../../theme";
 import { useFilterContext } from "../filter.context";
-import { PhoneIcon, SearchIcon } from "@chakra-ui/icons";
+import { SearchIcon } from "@chakra-ui/icons";
 export const SearchAndFilter = () => {
   const { filters, setFilters } = useFilterContext();
 
@@ -19,7 +19,6 @@ export const SearchAndFilter = () => {
   };
   const handleSelect = (e: ChangeEvent<HTMLSelectElement>) => {
     const value = e.target.value;
-    console.log(value);
     if (value === "all") {
       setFilters({ ...filters, category: null });
     }
@@ -34,7 +33,7 @@ export const SearchAndFilter = () => {
   return (
     <>
       <HStack gap={Spacing.md}>
-        <InputGroup>
+        <InputGroup width={"100%"}>
           <InputLeftElement pointerEvents="none">
             <SearchIcon />
           </InputLeftElement>
@@ -46,7 +45,7 @@ export const SearchAndFilter = () => {
           />
         </InputGroup>
 
-        <Select onChange={handleSelect}>
+        <Select onChange={handleSelect} width={"100%"}>
           <option value={"all"}>All Categories</option>
           {categoryOtions.map(({ value, label }) => (
             <option key={value} value={value}>

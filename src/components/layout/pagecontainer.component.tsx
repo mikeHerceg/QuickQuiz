@@ -52,7 +52,7 @@ export const PageContainer: FunctionComponent<PageContainerProps> = ({
         <Heading as="h1" mb={Spacing.lr}>
           {title}
         </Heading>
-        <Box as="section" flexGrow={1} maxW="900px">
+        <Box as="section" flexGrow={1} maxW="900px" width={"100%"}>
           {children}
         </Box>
       </VStack>
