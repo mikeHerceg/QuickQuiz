@@ -6,6 +6,7 @@ import { AllQuizes } from "../../quizes/all.quiz";
 import { Button, Text, VStack } from "@chakra-ui/react";
 import { Spacing } from "../../theme";
 import { QuizNotFound } from "../../components/errors/quizNotFound.component";
+import { QuizContextProvider } from "./quiz.context";
 
 export const Quiz: FunctionComponent = () => {
   const { quizId } = useParams();
@@ -14,11 +15,15 @@ export const Quiz: FunctionComponent = () => {
   if (!quizConfig) return <QuizNotFound />;
 
   return (
-    <PageContainer title={quizConfig.title} nav={<Link to={`/`}>Home</Link>}>
-      <VStack gap={Spacing.md}>
-        <Text textAlign="center">{quizConfig.description}</Text>
-        <Button>Start</Button>
-      </VStack>
-    </PageContainer>
+    <QuizContextProvider quiz={quizConfig}>
+      <PageContainer title={quizConfig.title} nav={<Link to={`/`}>Home</Link>}>
+        {/* move to be Start component */}
+        <VStack gap={Spacing.md}>
+          <Text textAlign="center">{quizConfig.description}</Text>
+          <Button>Start</Button>
+        </VStack>
+        {/* move to be Start component */}
+      </PageContainer>
+    </QuizContextProvider>
   );
 };
